@@ -1,0 +1,134 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+p {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 60%;
+}
+
+div.sec2 {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 15px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+div.sec1 {
+    flex-basis: 50%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+div.sec2 p:first-child {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+div.sec2 h1 {
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+}
+
+div.sec2 p:nth-child(3) {
+    line-height: 1.5;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+p.big {
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    color: hsl(158, 36%, 37%);
+}
+
+.sec2 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 45px;
+    border-style: none;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sec2 button p {
+    color: #fff;
+    font-weight: 700;
+}
+
+.sec2 button:hover {
+    background-color: hsl(159, 76%, 8%);
+}
+
+@media(max-width: 375px) {
+    .wrapper {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    div.sec1 {
+        flex-basis: 25vh;
+        background-image: url(images/image-product-mobile.jpg);
+        border-radius: 10px 10px 0 0;
+    }
+
+    div.sec2 {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media(min-width: 375px) and (max-width: 1440px) {
+    .wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 50%;
+    }
+
+    div.sec2 {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 0 10px 10px 0;
+    }
+}
