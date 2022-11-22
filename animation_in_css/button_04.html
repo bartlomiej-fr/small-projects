@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Przycisk</title>
+ <style>
+  button {
+   position: absolute;
+   bottom: 15vh;
+   right: 15vw;
+   border: 2px solid black;
+   padding: 20px 40px;
+   background-color: #fff;
+   font-size: 40px;
+   text-transform: uppercase;
+   font-family: roboto condensed;
+   animation: shakes 5s linear infinite;
+  }
+
+  @keyframes shakes {
+   0% {
+    transform: translateX(0) rotateX(0deg)
+   }
+   90% {
+    transform: translateX(0) rotateX(0deg)
+   }
+   91% {
+    transform: translateX(20px) rotateX(-10deg)
+   }
+   92% {
+    transform: translateX(-20px) rotateX(10deg)
+   }
+   93% {
+    transform: translateX(20px) rotateX(-10deg)
+   }
+   94% {
+    transform: translateX(-20px) rotateX(10deg)
+   }
+   95% {
+    transform: translateX(20px) rotateX(-10deg)
+   }
+   96% {
+    transform: translateX(-20px) rotateX(10deg)
+   }
+   97% {
+    transform: translateX(20px) rotateX(-10deg)
+   }
+   98% {
+    transform: translateX(-20px) rotateX(10deg)
+   }
+   99% {
+    transform: translateX(20px) rotateX(-10deg)
+   }
+   100% {
+    transform: translateX(0) rotateX(0deg)
+   }
+  }
+ </style>
+</head>
+
+<body>
+ <button>Kup teraz</button>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEO</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            height: 50vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @media(max-width:640px) {
+            header {
+                height: 40vh;
+            }
+        }
+
+        video.header {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        header h1 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 36px;
+            text-transform: uppercase;
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 15px 0;
+            z-index: 1;
+            animation: text 12s infinite both;
+        }
+
+        header h1:nth-of-type(2) {
+            animation-delay: 4s;
+        }
+
+        header h1:nth-of-type(3) {
+            animation-delay: 8s;
+        }
+
+        @keyframes text {
+            0% {
+                opacity: 0;
+            }
+
+            5% {
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            28% {
+                opacity: 0;
+            }
+
+            33.33% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tanio</h1>
+        <h1>Szybko</h1>
+        <h1>Srednio</h1>
+        <video class="header" src="video.mp4" autoplay muted loop playsinline></video>
+    </header>
+
+</body>
+
+</html>
