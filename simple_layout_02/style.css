@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* NAVIGATION PANEL */
+
+nav {
+    display: flex;
+    height: 10vh;
+    background-color: rgb(253, 195, 34);
+    border-bottom: 2px solid black;
+}
+
+div.logo {
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    margin-left: 10vw;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    float: left;
+}
+
+.logo p {
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+nav ul {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin-left: 15vw;
+}
+
+nav ul a {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav ul a:hover {
+    color: white;
+}
+
+nav ul a.start {
+    display: block;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+}
+
+nav ul a.start:hover {
+    background-color: #fff;
+    color: black;
+}
+
+
+/* MORE LINKS */
+
+menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20vh;
+    margin: 0 50px;
+}
+
+menu p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+menu ul a {
+    display: block;
+    font-size: 1.5rem;
+    color: #777;
+    text-decoration: none;
+    border: 1px solid #777;
+    padding: 10px 20px;
+    transition: .2s;
+}
+
+menu ul a:hover {
+    color: black;
+    border-color: black;
+}
+
+
+/* TEXT AND IMAGE */
+
+section {
+    display: flex;
+    border-top: 1px solid gray;
+}
+
+section .art_wrap {
+    flex-grow: 1;
+    margin: 50px 50px 0;
+    border: 2px solid black;
+}
+
+.art_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info p span {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+
+.info p {
+    line-height: 25px;
+    font-size: 1.5rem;
+}
+
+.info h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.info p:nth-of-type(2) {
+    color: #777;
+}
+
+.info p:nth-of-type(3) {
+    align-self: flex-end;
+    color: #777;
+}
+
+.img {
+    background-color: lightblue;
+    height: 15vw;
+    width: 25vw;
+}
+
+
+/* ANOTHER ARTICLES */
+
+
+article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+    margin: 0 50px;
+    padding: 0 25px;
+}
+
+article div {
+    height: 15vw;
+    width: 25vw;
+    background-color: lightblue;
+}
+
+/* JUST FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 15vh;
+    background-color: #000;
+}
+
+footer div.logo {
+    width: 30%;
+    align-self: flex-start;
+    display: flex;
+}
+
+footer .logo p {
+    color: #fff
+}
+
+footer div.icon {
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+}
+
+footer ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-left: 10vw;
+}
+
+footer ul li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
