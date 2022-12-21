@@ -4,11 +4,12 @@ const ball = document.querySelector(".ball"),
     fill = document.querySelector(".fill");
 
 const stretchSpring = () => {
+    fill.style.animationName = "fill";
     fill.style.animationPlayState = "running";
     spring.style.animationPlayState = "running";
     btn.textContent = "Release the spring";
-    btn.removeEventListener("mouseup", stretchSpring);
     btn.removeEventListener("touchstart", stretchSpring);
+    btn.removeEventListener("touchend", releaseSpring);
 };
 
 const releaseSpring = () => {
@@ -28,8 +29,8 @@ const releaseSpring = () => {
     document.documentElement.style.setProperty("--spring-left", getComputedStyle(spring).left);
     spring.style.animation = "release-spring .2s 1 forwards linear";
 
+    btn.removeEventListener("mouseup", releaseSpring);
     btn.removeEventListener("mousedown", stretchSpring);
-    btn.removeEventListener("touchend", stretchSpring);
 
     ball.addEventListener("animationend", resetAnimation);
 };
@@ -46,6 +47,10 @@ const resetAnimation = () => {
 
         btn.style.color = "white";
         btn.textContent = "Stretch the spring";
+
+        spring.style.animation = "";
+        ball.style.animation = "";
+        fill.style.animationName = "none";
     }, 2000);
 };
 
