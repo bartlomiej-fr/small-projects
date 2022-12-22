@@ -33,6 +33,15 @@ const releaseSpring = () => {
     btn.removeEventListener("mousedown", stretchSpring);
 
     ball.addEventListener("animationend", resetAnimation);
+
+    const myRules = document.styleSheets[0].cssRules;
+    console.log(myRules);
+
+    for (const i of myRules) {
+        if (i.name === "fly-ball-x") {
+            i.appendRule(`100% {left: ${20 + progressPercent * 80}%}`);
+        }
+    }
 };
 
 const resetAnimation = () => {
