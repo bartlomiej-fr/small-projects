@@ -12,6 +12,7 @@
             height: 100px;
             background-color: cadetblue;
             margin: 20px;
+            visibility: hidden;
         }
 
         .e1 {
@@ -25,6 +26,11 @@
     <div class="e2"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script>
+        TweenMax.set('div', {
+            visibility: "visible",
+            // width: 300,
+            // border: "2px solid red"
+        })
         TweenMax.from('.e1', 2, {
             x: 0,
             repeat: -1,
