@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP-4</title>
+    <style>
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: tahoma;
+            font-size: 80px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Lorem1</div>
+    <div>Lorem2</div>
+    <div>Lorem3</div>
+    <div>Lorem4</div>
+    <div>Lorem5</div>
+    <div>Lorem6</div>
+    <div>Lorem7</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        const elements = document.querySelectorAll('div');
+        const colors = () => {
+            const colorList = ['red', 'blue', 'green'];
+            const color = colorList[Math.floor(Math.random() * colorList.length)];
+            return color;
+        }
+        TweenMax.staggerTo(elements, .5, {
+            opacity: 1,
+            color: colors,
+            ease: "none",
+        }, 2)
+        TweenMax.staggerTo(elements, .5, {
+            opacity: 0,
+            delay: 1,
+        }, 2)
+    </script>
+</body>
+
+</html>
