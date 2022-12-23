@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP-6</title>
+    <style>
+        .rect {
+            margin: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Animation</button>
+    <div class="rect"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        const rect = document.querySelector('.rect');
+        const btn = document.querySelector('button');
+        const timeline = new TimelineMax({
+            repeat: 1,
+            yoyo: true,
+            repeatDelay: 1,
+            onStart: () => console.log("start"),
+            onComplete: () => alert("end"),
+            paused: true,
+            delay: 0,
+        });
+        // timeline.resume();
+        timeline
+            .to(rect, 1, {
+                x: '+=200'
+            })
+            .to(rect, 1, {
+                y: 200
+            })
+            .add('half')
+            .to(rect, 1, {
+                x: '-=200'
+            })
+            .to(rect, 1, {
+                y: 0
+            })
+            .to(rect, 1, {
+                backgroundColor: 'red'
+            }, 'half')
+
+        btn.addEventListener('click', () => {
+            console.log(timeline)
+            if (timeline._ps) {
+                timeline.resume();
+            } else {
+                timeline.pause();
+            }
+        })
+    </script>
+</body>
+
+</html>
