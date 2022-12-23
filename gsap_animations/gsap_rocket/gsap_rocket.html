@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP-5</title>
+    <style>
+        .rocket {
+            position: absolute;
+            left: 50%;
+            bottom: 150px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="rocket" src="rocket.svg" alt="rocket">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        const rocket = document.querySelector('.rocket');
+
+        const tl = new TimelineMax();
+        // tl.timeScale(1.2);
+        tl.set(rocket, {
+            rotation: 90
+        });
+        tl.to(rocket, 2, {
+            rotation: "-=90"
+        });
+        tl.to(rocket, 2, {
+            y: -300,
+            delay: .2,
+            ease: "power4.in",
+        });
+        tl.to(rocket, 1, {
+            y: '-=100',
+            ease: "none",
+        });
+        tl.add('stop');
+        tl.to(rocket, .7, {
+            rotation: '-=120'
+        }, 'stop');
+        tl.to(rocket, 1, {
+            y: 80
+        }, 'stop');
+        tl.to(rocket, 1, {
+            opacity: 0
+        })
+    </script>
+</body>
+
+</html>
